@@ -13,6 +13,6 @@ int keliling_segitiga = sisi_segitigaA + sisi_segitigaB + sisi_segitigaC;
 
 void main(){
   print('Keliling persegi panjang adalah $keliling_persegi_panjang');
-  print('Luas segitiga adalah $keliling_segitiga');
+  print('Keliling segitiga adalah $keliling_segitiga');
 }
 
