@@ -5,13 +5,14 @@ int panjang_persegi = 5;
 int lebar_persegi = 5;
 int keliling_persegi_panjang = 2 * (panjang_persegi + lebar_persegi);
 
-// 2. Variable luas segitiga
-int alas_segitiga = 10;
-int tinggi_segitiga = 15;
-double luas_segitiga = 1/2 * alas_segitiga * tinggi_segitiga;
+// 2. Variable keliling segitiga
+int sisi_segitigaA = 5;
+int sisi_segitigaB = 5;
+int sisi_segitigaC = 5;
+int keliling_segitiga = sisi_segitigaA + sisi_segitigaB + sisi_segitigaC;
 
 void main(){
   print('Keliling persegi panjang adalah $keliling_persegi_panjang');
-  print('Luas segitiga adalah $luas_segitiga');
+  print('Luas segitiga adalah $keliling_segitiga');
 }
 
