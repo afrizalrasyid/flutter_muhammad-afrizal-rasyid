@@ -1,0 +1,3 @@
+1. Github merupakan sebuah website atau layanan yang digunakan oleh para programmer untuk menyimpan source code aplikasi
+2. Suatu repository pada Github dapat dibuat dengan beberapa branch yang mana meminimalisir suatu conflict pada aplikasi ketika melakukan kolaborasi
+3. Jika terjadi conflict (biasanya error karena perubahan di line yang sama), developer bisa memperbaiki dengan cara me-replace baris kode dengan yang baru, atau dengan tetap menggunakan yang lama, atau juga bisa dengan menggabungkan keduanya

@@ -1,0 +1,3 @@
+1. Dart adalah bahasa pemrograman yang dikembangkan oleh Google, bahasa pemrograman Dart dapat mengembangkan aplikasi mobile, web, dan server
+2. Terdapat kelebihan dan kekurangan dari bahasa pemrograman Dart, salah satu kelebihannya adalah bahasa ini cocok untuk pemula dalam pengembangan aplikasi hybrid. Sedangkan untuk kekurangannya adalah jika dalam perusahaan besar, bahasa pemrograman lain lebih unggul. Contoh: Kotlin dan Swift
+3. Terdapat komponen utama jika ingin membuat suatu function yaitu tipe data, variabel, dan nilai dari variabel
