@@ -4,7 +4,7 @@
 void main(){
   double buku = 10000;
   double pensil = 5000;
-  double tas = 10000;
+  double tas = 100000;
 
   double total_pembelian = 200000;
   double diskon = 0.1;
