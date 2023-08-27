@@ -1,0 +1,3 @@
+1. IF merupakan suatu fungsi yang dapat menentukan suatu kondisi dengan memerlukan nilai bool (ya atau tidak) yang dapat diakhiri dengan fungsi ELSE.
+2. Terdapat perulangan yang digunakan oleh programmer yang bisa disebut dengan For, While, Do-While, perulangan tersebut juga dapat dihentikan dengan Break dan Continue. Fungsi tersebut dapat digunakan masing-masing sesuai dengan kebutuhan.
+3. Sebuah fungsi IF dan perulangan dapat digunakan dalam sebuah function, yang mana function merupakan kumpulan kode yang dapat digunakan ulang. Function dapat digunakan dan dipanggil berkali-kali dengan sebuah parameter

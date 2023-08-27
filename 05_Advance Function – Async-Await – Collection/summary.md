@@ -1,0 +1,3 @@
+1. Terdapat 2 dari function lanjutan, yang pertama adalah Anonymous Function (Tidak memiliki nama dan fungsi sebagai data) dan Arrow Function (Dapat memiliki nama atau tidak, berisi 1 data, dan nilai return fungsi diambil dari data tersebut).
+2. Asycn-Await merupakan fungsi yang menjalankan beberapa proses tanpa perlu menunggu seperti, jadi await akan menunggu hingga proses async selesai.
+3. Terdapat macam-macam collection pada dart, akan tetapi pada materi kali ini hanya 2 saja yang dibahas yaitu List dan Map. List dan map berguna sebagai penyimpanan sebuah data, sama halnya seperti Array. Akan tetapi ada perbedaan antara list dan map yaitu list menyimpan data secara berbaris, sedangkan map menyimpan data secara key-value(index) pada list
