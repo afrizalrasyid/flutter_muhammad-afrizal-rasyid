@@ -1,0 +1,3 @@
+1. OOP atau bisa disebut Object Oriented Programming adalah metode pada bahasa pemrograman yang berorientasi pada objek, yang mana hal ini dapat memudahkan programmer dalam menyusun kode program atau membuat kode programnya lebih tertata.
+2. Pada OOP terdapat yang namanya class, class adalah abstraksi dari sebuah object yang memiliki property. Sedangkan untuk property adalah ciri ciri dari class tersebut atau hal yang dimiliki dari class tersebut. Contohnya adalah Class: Burung, Property: bersuara, terbang.
+3. Selain property, terdapat juga yang namanya method. Method merupakan sifat suatu class dan juga aktivitas yang dapat dikerjakan suatu class. Method juga hampir mirip dengan yang namanya Function, akan tetapi method hanya ada pada di masing masing class.
