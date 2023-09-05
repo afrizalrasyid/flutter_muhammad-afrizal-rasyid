@@ -12,12 +12,12 @@ const HelloWorld({ Key? key }) : super(key: key);
     return MaterialApp(      
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'Hello World!'
-            )
+          title: const Text('Material App')
           ),
-          body: const Text('test'),
-        ),
+        body: const Center(
+          child: Text("material app"),
+        )
+      )
     );
   }
 }
