@@ -34,6 +34,11 @@ const MyApp({ Key? key }) : super(key: key);
                   child: ListView(
                     padding: const EdgeInsets.all(10),
                     children: const [
+                    ListTile(
+                      leading: FlutterLogo(),
+                      title: Text("rasyid"),
+                      subtitle: Text("test"),
+                    ),
                     Text('ADE ALI INDRA'),
                     Text('ALWIN ZUHRIANDI MANALU'),
                     Text('ANISA YUNIARTI'),
