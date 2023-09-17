@@ -1,45 +1,27 @@
 import 'package:flutter/material.dart';
 void main() {
-  runApp(const HelloWord());
+  runApp(const MyApp());
 }
 
-class HelloWord extends StatefulWidget {  
-  const HelloWord({super.key});
+class MyApp extends StatefulWidget {  
+  const MyApp({super.key});
 
   @override
-  State<HelloWord> createState() => _HelloWordState();
+  State<MyApp> createState() => _MyAppState();
 }
 
-class _HelloWordState extends State<HelloWord> {
-  var dropDownValue = 0;
+class _MyAppState extends State<MyApp> {
+  List <Map<String, dynamic>> listMahasiswa = [];
+  String dropDownValue = 'Pilih Universitas';
   var checkValue1 = false;
   var checkValue2 = false;
   var checkValue3 = false;
   
   var inputControllers = TextEditingController();
   var radioValue = '';
-  List data_mahasiswa = [
-    {
-      "nama": "Rasyid", 
-      "jenis_kelamin": "Laki-laki", 
-      "bahasa_pemrograman": "Dart", 
-      "universitas": "PNJ"
-    }    
-  ];
+  
   @override
-  Widget build(BuildContext context) {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
-      };
-      if (states.any(interactiveStates.contains)) {
-        return Colors.grey;
-      }
-      return Colors.grey;
-    }
-
+  Widget build(BuildContext context) {    
     return MaterialApp(        
         home: Scaffold(
       appBar: AppBar(
@@ -94,8 +76,7 @@ class _HelloWordState extends State<HelloWord> {
               Row(
                 children: [
                   Checkbox(
-                      value: checkValue1,                      
-                      fillColor: MaterialStateProperty.resolveWith(getColor),
+                      value: checkValue1,                                            
                       onChanged: (bool? value) {
                         setState(() {
                           checkValue1 = value!;
@@ -110,8 +91,7 @@ class _HelloWordState extends State<HelloWord> {
               Row(
                 children: [
                   Checkbox(
-                      value: checkValue2,                      
-                      fillColor: MaterialStateProperty.resolveWith(getColor),
+                      value: checkValue2,                                            
                       onChanged: (bool? value) {
                         setState(() {
                           checkValue2 = value!;
@@ -126,8 +106,7 @@ class _HelloWordState extends State<HelloWord> {
               Row(
                 children: [
                   Checkbox(
-                      value: checkValue3,
-                      fillColor: MaterialStateProperty.resolveWith(getColor),
+                      value: checkValue3,                      
                       onChanged: (bool? value) {
                         setState(() {
                           checkValue3 = value!;    
@@ -140,30 +119,32 @@ class _HelloWordState extends State<HelloWord> {
                 ],
               ),
               const Divider(),
-              // CheckboxExample(),
               Row(
                 children: [
                   DropdownButton(
                       value: dropDownValue,
                       items: const [
                         DropdownMenuItem(
-                          value: 0,
+                          value: "Pilih Universitas",
                           child: Text('Pilih Universitas'),
                         ),
                         DropdownMenuItem(
-                          value: 1, child: Text('UBSI')
+                          value: "UBSI", 
+                          child: Text('UBSI')
                         ),
                         DropdownMenuItem(
-                          value: 2, child: Text('PNJ')
+                          value: "PNJ", 
+                          child: Text('PNJ')
                         ),
                         DropdownMenuItem(
-                          value: 3, child: Text('ITI')
+                          value: "ITI", 
+                          child: Text('ITI')
                         )
                       ],
-                      onChanged: (int? value) {
+                      onChanged: (String? value) {
                         setState(() {
-                          dropDownValue = value ?? 0;
-                          print(dropDownValue);
+                          dropDownValue = value ?? "Pilih";
+                          dropDownValue;
                         });
                       }),
                 ],
@@ -172,35 +153,47 @@ class _HelloWordState extends State<HelloWord> {
                 child: const Text('Submit'),
                 onPressed: () {
                   setState(() {
-                    data_mahasiswa.add({
-                      "nama": "${inputControllers.text}",
-                      "jenis_kelamin": "$radioValue",
-                      "bahasa_pemrograman": checkValue1,
-                      "universitas": "$dropDownValue"
+                    listMahasiswa.add({
+                      "nama": inputControllers.text,
+                      "jenis_kelamin": radioValue,
+                      "bahasa_pemrograman": [
+                        if (checkValue1) 'C++',
+                        if (checkValue2) 'Dart',
+                        if (checkValue3) 'PHP'
+                        ],
+                      "universitas": dropDownValue,
                     });
                   });
-
-                  print('Data Mahasiswa : $data_mahasiswa');
+                  print('Data Mahasiswa : $listMahasiswa');
                 },
               ),
               SizedBox(
                   height: 200,
                   child: ListView.builder(
-                      itemCount: data_mahasiswa.length,
+                      itemCount: listMahasiswa.length,
                       itemBuilder: (BuildContext context, int index) {
+                        var mahasiswa = listMahasiswa;
                         return ListTile(
                           leading: const FlutterLogo(),
-                          title: Text('${data_mahasiswa[index]["nama"]}'),
-                          subtitle: Text('${data_mahasiswa[index]["jenis_kelamin"]}'),                          
-
+                          title: Text('${mahasiswa[index]["nama"]}'),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('${mahasiswa[index]["jenis_kelamin"]}'),
+                              Text('${mahasiswa[index]["bahasa_pemrograman"].join(', ')}'),
+                              Text('${mahasiswa[index]["universitas"]}')
+                            ],
+                          ),  
                         );
-                      })
-                  ),
-              
+                      }
+                  )
+              ),
             ],
-          )),
+          )
+          ),
         ),
       ),
-    ));
+    )
+    );
   }
 }
