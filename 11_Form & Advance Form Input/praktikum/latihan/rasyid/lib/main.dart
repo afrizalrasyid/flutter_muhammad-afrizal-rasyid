@@ -28,8 +28,7 @@ class _MyAppState extends State<MyApp> {
         title: const Text('Latihan'),
       ),
       body: SingleChildScrollView(
-        child: Container(
-          color: Colors.grey,
+        child: Container(          
           margin: const EdgeInsets.only(top: 30, left: 20, right: 20),
           child: Center(
             child: Column(
@@ -183,7 +182,27 @@ class _MyAppState extends State<MyApp> {
                               Text('${mahasiswa[index]["bahasa_pemrograman"].join(', ')}'),
                               Text('${mahasiswa[index]["universitas"]}')
                             ],
-                          ),  
+                          ),
+                          trailing:  Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [                              
+                              IconButton(
+                                onPressed: (){
+                                  alertEdit(context, index);
+                                },
+                                icon: Icon(Icons.edit),                                
+                              ),
+                              IconButton(
+                                onPressed: (){
+                                  setState(() {
+                                    listMahasiswa.removeAt(index);
+                                  });
+                                  print("delete");
+                                },
+                                icon: const Icon(Icons.delete)
+                              )
+                            ],
+                          )
                         );
                       }
                   )
@@ -196,4 +215,53 @@ class _MyAppState extends State<MyApp> {
     )
     );
   }
+
+  Future<void> alertEdit(BuildContext context, int index) {
+    TextEditingController textEditingController = TextEditingController();
+    textEditingController.text = listMahasiswa[index]['nama'];
+
+    return showDialog(
+      context: context, 
+      builder: (BuildContext context) => AlertDialog(
+        title: const Align(
+          alignment: Alignment.center,
+          child: Text("Edit Data"),
+        ),
+        content: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [          
+            const Text(
+              "Nama",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            TextField(                    
+              controller: textEditingController,          
+            )
+          ],
+        ),
+        actions: <Widget>[
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [                                          
+              TextButton(
+                onPressed:() {
+                  setState(() {
+                    listMahasiswa[index]['nama'] = textEditingController.text;
+                  });
+                  Navigator.pop(context, true);
+                },
+                child: const Text("Edit")
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context, false);
+                },
+                child: const Text("Cancel")
+              ),
+            ],
+          )
+        ],
+      )
+    );    
+  }        
 }
