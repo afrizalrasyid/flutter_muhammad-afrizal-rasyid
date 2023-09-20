@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {  
@@ -16,6 +20,9 @@ class _MyAppState extends State<MyApp> {
   var checkValue1 = false;
   var checkValue2 = false;
   var checkValue3 = false;
+
+  DateTime _duedate = DateTime.now();
+  final currentDate = DateTime.now();
   
   var inputControllers = TextEditingController();
   var radioValue = '';
@@ -148,6 +155,10 @@ class _MyAppState extends State<MyApp> {
                       }),
                 ],
               ),
+
+              const Divider(),    
+              buildDatePicker(context),
+
               ElevatedButton(
                 child: const Text('Submit'),
                 onPressed: () {
@@ -190,7 +201,7 @@ class _MyAppState extends State<MyApp> {
                                 onPressed: (){
                                   alertEdit(context, index);
                                 },
-                                icon: Icon(Icons.edit),                                
+                                icon: const Icon(Icons.edit),
                               ),
                               IconButton(
                                 onPressed: (){
@@ -213,6 +224,40 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     )
+    );
+  }
+
+  Widget buildDatePicker(BuildContext context){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text("Date"),
+            TextButton(
+              onPressed: () async {
+                final selectDate = await showDatePicker(
+                  context: context,
+                  initialDate: currentDate,
+                  firstDate: DateTime(1990), 
+                  lastDate: DateTime(currentDate.year + 5)
+                  );
+
+                  setState(() {
+                    if (selectDate != null){
+                      _duedate = selectDate;
+                    }
+                  });
+              },
+              child: const Text('Select')
+            )
+          ],
+        ),
+        Text(
+          DateFormat('dd-MM-yyyy').format(_duedate),
+        ),
+      ],
     );
   }
 
