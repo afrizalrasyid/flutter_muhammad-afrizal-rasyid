@@ -1,0 +1,3 @@
+1. Terdapat macam format widget dari flutter yang dapat digunakan di device yang dibutuhkan seperti MaterialApp untuk Android dan CupertinoApp untuk iOS
+2. Pada dasarnya terdapat struktur dari masing masing format widget untuk membangun sebuah halaman, untuk MaterialApp ada yang namanya Scaffold dan untuk CupertinoApp ada yang namanya CupertinoPageScaffold
+3. Jika ingin menggunakan MaterialApp ataupun CupertinoApp pun beda beda dalam import packagenya, dalam MaterialApp kita harus mengimport package package:flutter/material.dart sedangkan untuk CupertinoApp dapat mengimport package package:flutter/cupertino.dart
