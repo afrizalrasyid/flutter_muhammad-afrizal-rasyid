@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -23,6 +24,8 @@ class _MyAppState extends State<MyApp> {
 
   DateTime _duedate = DateTime.now();
   final currentDate = DateTime.now();
+
+  Color _currentColor = Colors.orange;
   
   var inputControllers = TextEditingController();
   var radioValue = '';
@@ -156,8 +159,11 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
 
-              const Divider(),    
-              buildDatePicker(context),
+              const Divider(),
+              buildDatePicker(context),            
+              const Divider(),
+              buildColorPicker(context),
+              const SizedBox(height: 10,),
 
               ElevatedButton(
                 child: const Text('Submit'),
@@ -257,6 +263,53 @@ class _MyAppState extends State<MyApp> {
         Text(
           DateFormat('dd-MM-yyyy').format(_duedate),
         ),
+      ],
+    );
+  }
+
+  Widget buildColorPicker(BuildContext context){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text('Color'),
+        const SizedBox(height: 10),
+        Container(
+          height: 100,
+          width: double.infinity,
+          color: _currentColor,          
+        ),
+        const SizedBox(height: 10),
+        SizedBox(
+          child: ElevatedButton(
+            onPressed: (){
+              showDialog(
+                context: context,
+                builder: (context){
+                  return AlertDialog(
+                    title: const Text('Pick Your Color'),
+                    content: BlockPicker(
+                      pickerColor: _currentColor, 
+                      onColorChanged: (color){
+                        setState(() {
+                          _currentColor = color;
+                        });
+                      }
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: (){
+                          Navigator.pop(context);
+                        }, 
+                        child: const Text('Save')
+                      )
+                    ],
+                  );
+                }
+              );
+            },
+            child: const Text('Pick Color')
+          ),
+        )
       ],
     );
   }
