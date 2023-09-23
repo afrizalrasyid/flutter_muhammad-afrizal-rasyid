@@ -1,0 +1,3 @@
+1. Date Picker, Color Picker, dan File Picker merupakan termasuk Advance Form Input dikarenakan memerlukan interaksi lebih banyak dibandingkan form input yang lainnya.
+2. Date Picker merupakan widget dimana user bisa memilih tanggal yang diinginkan. Contoh penggunaan Date Picker adalah seperti tanggal kelahiran, waktu pemesanan, maupun waktu reservasi. Sedangkan Color Picker adalah widget yang mana user bisa memilih warna yang diinginkan berdasarkan format yang sudah disediakan google.
+3. Lalu terdapat widget File Picker yang mana dapat mengambil data berupa file yang ada di file explorer di masing masing device.
