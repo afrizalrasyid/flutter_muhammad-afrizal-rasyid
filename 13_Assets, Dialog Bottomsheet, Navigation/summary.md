@@ -1,0 +1,3 @@
+1. Assets merupakan sebuah file yang dapat diakses dan dideployed bersamaan dengan aplikasi, tipe-tipe dari assets terdapat seperti JSON Files, icons, images, dan font.
+2. Jika ingin menentukan atau memakai assets tersebut, developer bisa melakukan dengan cara menambahkan assets di Pubspec.yaml dengan format "assets/" agar untuk memasukkan semua assets dalam satu directory.
+3. Selain menambahkan assets di local folder, developer juga bisa menambahkan assets lewat web atau internet dengan cara "Image.network" untuk gambar.
