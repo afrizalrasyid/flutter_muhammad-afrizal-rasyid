@@ -1,0 +1,3 @@
+1. Navigation pada programming merupakan perpindahan dari satu halaman ke halaman lain. Dalam flutter, kita bisa menggunakannya dengan navigation dasar dan navigation routes.
+2. Pada navigation dasar, pada perpindahan halaman menggunakan Navigator.push() dan untuk kembali ke halaman sebelumnya menggunakan Navigator.pop(). Sedangkan pada navigation routes menggunakan Navigator.pushNamed() dan Navigator.pop() untuk kembali ke halaman sebelumnya. Untuk penggunaan navigation routes developer harus menambahkan routes dulu pada MaterialApp yang ada di main.dart
+3. Kita juga bisa mengirim data ke halaman yang baru dengan menggunakan parameter pada navigation dasar dan pushNamed untuk navigation routes
