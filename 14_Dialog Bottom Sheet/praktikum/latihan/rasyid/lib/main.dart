@@ -20,29 +20,21 @@ class MyApp extends StatelessWidget {
           padding: const EdgeInsets.all(30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [              
+            children: [
               const Text('Images dengan file'),
-              ElevatedButton(
-                onPressed: (){
-                  print('test');
-                }, 
-                child: const Text('Test')
-              ),              
-              InkWell( 
+              InkWell(
                 onTap: () {
                   showModalBottomSheet(
-                    context: context, 
+                    context: context,
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.vertical(
                         top: Radius.circular(20),
                       ),
                     ),
-                    builder: (context) => const ShowBottomSheet()
+                    builder: (context) => const ShowBottomSheet(),
                   );
-                },               
-                child: const Image(
-                  image: AssetImage('assets/images/carousel_1.jpg'),
-                ),
+                },
+                child: detailImage(),
               ),
             ],
           ),
@@ -51,7 +43,9 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  
+  static Widget detailImage() {
+    return const Image(
+      image: AssetImage('assets/images/carousel_1.jpg'),
+    );
+  }
 }
-
-

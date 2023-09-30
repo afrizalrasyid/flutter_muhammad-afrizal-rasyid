@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rasyid/detail_image.dart';
+import 'package:rasyid/main.dart';
 
 class ShowBottomSheet extends StatelessWidget {
   const ShowBottomSheet({Key? key}) : super(key: key);
@@ -10,18 +11,17 @@ class ShowBottomSheet extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Column(
         children: [
-          const Image(
+          SizedBox(
             height: 200,
-            image: AssetImage('assets/images/carousel_1.jpg')
+            child: MyApp.detailImage(),
           ),
           ElevatedButton(
-            onPressed: (){
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => const DetailImage()),
-              );
-            }, 
-            child: const Text('ya')
-          )
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const DetailImage()),
+                );
+              },
+              child: const Text('ya'))
         ],
       ),
     );

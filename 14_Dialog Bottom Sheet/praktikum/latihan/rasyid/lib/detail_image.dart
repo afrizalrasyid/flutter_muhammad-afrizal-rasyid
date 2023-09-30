@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rasyid/main.dart';
 
 class DetailImage extends StatelessWidget {
   const DetailImage({super.key});
@@ -7,23 +8,18 @@ class DetailImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Detail Image'),
-        ),
-        body: const Center(
-          child: Column(                                          
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Ini adalah detail image',
-                style: TextStyle(
-                  fontSize: 20
-                ),
-              ),
-            ],
+          appBar: AppBar(
+            title: const Text('Detail Image'),
           ),
-        )
-      ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Ini adalah gambar detail'),
+                MyApp.detailImage(),
+              ],
+            ),
+          )),
     );
   }
 }
