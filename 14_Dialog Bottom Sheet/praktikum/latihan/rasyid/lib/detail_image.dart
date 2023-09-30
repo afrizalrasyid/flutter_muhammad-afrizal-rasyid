@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rasyid/main.dart';
+import 'package:rasyid/galeri.dart';
 
 class DetailImage extends StatelessWidget {
   const DetailImage({super.key});
@@ -16,7 +16,7 @@ class DetailImage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('Ini adalah gambar detail'),
-                MyApp.detailImage(),
+                Galeri.detailImage(),
               ],
             ),
           )),
