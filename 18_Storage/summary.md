@@ -1,0 +1,3 @@
+1. Penyimpanan lokal pada flutter merupakan penyimpanan yang terjadi di lokal dan dapat diakses dan dioperasikan pada data yang telah dibuat.
+2. Terdapat 2 penyimpanan lokal yaitu Shared Preferences dan Local Databases (SQLite). Shared Preferences merupakan penyimpanan lokal yang menyimpan data dengan sederhana dengan menggunakan format key-value, contohnya adalah penyimpanan data untuk login. Sedangkan SQLite dapat menyimpan data dengan jumlah besar pada local device yang bersifta private.
+3. Perbedaan dari Shared Preferences dan SQLite adalah Shared Preferences hanya dapat menyimpan suatu data bertipe teks, angka, dan boolean. Sedangkan SQLite adalah database yang dapat mendukung kegiatan CRUD.
