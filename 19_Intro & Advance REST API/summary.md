@@ -1,0 +1,3 @@
+1. REST API merupakan singkatan dari Representational State Transfer Application Programming Interface yang mana digunakan untuk menjembatani atau yang memisahkan antara user interface dan proses bisnis dari sebuah aplikasi.
+2. HTTP merupakan protokol yang digunakan untuk mengirim dan menerima data pada internet yang biasanya berbentuk media web. Struktur Request (yang diinginkan) pada HTTP terdapat URL, sebuah Method (GET, POST, PUT, DELETE), Header, dan Body. Sedangkan untuk Response (sebuah respon dari http) terdapat Status Code, Header, dan Body.
+3. DIO adalah sebuah package pada flutter yang digunakan untuk melakukan sebuah Method dan juga sebagai HTTP Client yang dimanfaatkan untuk melakukan REST API
