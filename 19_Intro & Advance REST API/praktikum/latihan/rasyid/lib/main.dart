@@ -1,54 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
+import 'package:rasyid/latihan.dart';
+import 'package:rasyid/tugas.dart';
+import 'package:rasyid/home.dart';
 
 void main() {
-  runApp(const MyHomePage());
+  runApp(const MyApp());
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  final dio = Dio();
-
-  Future fetchData() async {
-    final Response response = await dio.get('https://pokeapi.co/api/v2/berry/');
-    debugPrint(response.data.toString());
-    return response.data;
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    fetchData();
-  }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Fetching Data'),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              FutureBuilder(
-                future: fetchData(),
-                builder: (context, snapshot) {
-                  final data = snapshot.data;
-                  return Text('Data: ${data.toString()}');
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (_) => const Home(),
+        '/latihan': (_) => const Latihan(),
+        '/tugas': (_) => const Tugas(),
+      },
     );
   }
 }
