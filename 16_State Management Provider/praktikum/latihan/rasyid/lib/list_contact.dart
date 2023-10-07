@@ -226,6 +226,7 @@ class _ListContact extends State<ListContact> {
     nameEditingController.text = contactProvider.contacts[index].name;
     phoneEditingController.text = contactProvider.contacts[index].phoneNumber;
 
+    // ignore: unused_local_variable
     final result = await showDialog(
       context: context,
       builder: (BuildContext context) => AlertDialog(
