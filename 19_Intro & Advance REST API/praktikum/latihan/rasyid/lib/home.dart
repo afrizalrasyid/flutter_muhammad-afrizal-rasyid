@@ -28,7 +28,16 @@ class Home extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pushNamed('/tugas');
                 },
-                child: const Text('Tugas'),
+                child: const Text('Prioritas 1'),
+              ),
+              const SizedBox(
+                width: 15,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/tugas2');
+                },
+                child: const Text('Prioritas 2'),
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const Tugas());
@@ -100,7 +101,7 @@ class _Tugas extends State<Tugas> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Fetching Data'),
+          title: const Text('Prioritas 1'),
         ),
         body: Container(
           margin: const EdgeInsets.only(top: 30, left: 20, right: 20),
