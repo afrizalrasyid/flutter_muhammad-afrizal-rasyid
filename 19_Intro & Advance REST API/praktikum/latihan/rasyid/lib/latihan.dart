@@ -261,7 +261,7 @@ class _Latihan extends State<Latihan> {
                           },
                         );
                       },
-                      child: const Text('POST'),
+                      child: const Text('DELETE'),
                       style: ElevatedButton.styleFrom(
                           shape: const StadiumBorder(),
                           backgroundColor: Colors.deepPurple),
@@ -272,7 +272,7 @@ class _Latihan extends State<Latihan> {
               SizedBox(
                 height: 200,
                 child: ListView.builder(
-                  itemCount: jsonList == null ? 0 : jsonList.length,
+                  itemCount: jsonList.length,
                   itemBuilder: (BuildContext, int index) {
                     return Card(
                       child: ListTile(
