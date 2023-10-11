@@ -1,0 +1,3 @@
+1. UI Testing pada Flutter merupakan pengujian pada widget atau pada tampilan suatu aplikasi yang mana berguna untuk memastikan bahwa aplikasi dapat menerima interaksi dan memberi respon kepada pengguna.
+2. Keuntungan dari pada UI Testing adalah yang pertama UI Testing dapat memastikan seluruh widget memberi tampilan yang sesuai, memastikan seluruh interaksi dapat diterima dengan baik, dan menjadi ketentuan yang harus diikuti saat diperlukan perubahan widget.
+3. Pengujian pada UI Testing dapat dilakukan dengan script testWidgets yang berisi widget tester. Lalu jika testing berjalan sesuai apa yang ingin diuji maka akan muncul pesan 'All tests passed!' pada log, sedangkan jika gagal maka akan muncul penyebab gagalnya pengujian.
