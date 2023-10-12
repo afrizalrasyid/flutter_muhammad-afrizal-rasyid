@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const Tugas());
@@ -263,7 +262,7 @@ class _Tugas extends State<Tugas> {
                           },
                         );
                       },
-                      child: const Text('POST'),
+                      child: const Text('DELETE'),
                       style: ElevatedButton.styleFrom(
                           shape: const StadiumBorder(),
                           backgroundColor: Colors.deepPurple),
