@@ -14,15 +14,15 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.grey.shade800,
-          title: Row(
+          title: const Row(
             children: [
-              Image.asset(
-                'assets/images/icon.png',
+              Image(
+                image: AssetImage('assets/images/icon.png'),
                 color: Colors.white,
                 width: 35,
               ),
-              const SizedBox(width: 10.0),
-              const Text(
+              SizedBox(width: 10.0),
+              Text(
                 'Our Furniture',
                 style: TextStyle(
                   fontSize: 20,
