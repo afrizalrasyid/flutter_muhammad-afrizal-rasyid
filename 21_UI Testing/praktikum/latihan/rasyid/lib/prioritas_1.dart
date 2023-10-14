@@ -86,7 +86,7 @@ class _Prioritas1State extends State<Prioritas1> {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        title: const Text('Contacts'),
+        title: const Text('Soal Prioritas 1'),
       ),
       body: SingleChildScrollView(
         child: Container(
